@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block content %}
-<!DOCTYPE html>
-<html lang="en">
+
+{% block head %}
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +11,9 @@
 
   <link rel="stylesheet" href="{% static 'css/styles.min.css' %}">
 </head>
-<body>
+{% endblock %}
+
+{% block content %}
 
   <!--================ Hero sm Banner start =================-->
   <section class="mb-30px">
@@ -32,9 +33,6 @@
   </section>
   <!--================ Hero sm Banner end =================-->
 
-
-
-
   <!--================ Start Blog Post Area =================-->
   <section class="blog-post-area section-margin">
     <div class="container">
@@ -42,9 +40,9 @@
         <div class="col-lg-8">
             <div class="main_blog_details">
               {% if post.image_url %}
-                <img class="img-fluid" src="{{post.image_url}}" alt="">
+                <img class="img-fluid" src="{{post.image_url}}" alt="{{post.title}}">
               {% else %}
-                <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="">
+                <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="Blog">
               {% endif %}
                 <h4>{{post.title}}</h4>
                 <div class="user_details">
@@ -120,6 +118,4 @@
   </section>
   <!--================ End Blog Post Area =================-->
 
-</body>
-</html>
 {% endblock %}
