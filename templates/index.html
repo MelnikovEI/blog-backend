@@ -35,7 +35,6 @@ Sensive Blog - Home
                   {% else %}
                     <img class="card-img rounded-0" src="{% static 'img/banner/blog.png' %}" alt="Blog">
                   {% endif %}
-
                 </div>
                 <div class="blog__slide__content">
                   <h3><a href="{% url 'post_detail' post.slug %}">{{post.title}}</a></h3>
@@ -54,7 +53,6 @@ Sensive Blog - Home
       <div class="container">
         <div class="row">
           <div class="col-lg-8">
-
             {% for post in fresh_posts %}
               <div class="single-recent-blog-post">
                 <div class="thumb">
@@ -76,29 +74,28 @@ Sensive Blog - Home
                 </div>
               </div>
             {% endfor %}
-
             <div class="row">
               <div class="col-lg-12">
-                  <nav class="blog-pagination justify-content-center d-flex">
-                      <ul class="pagination">
-                          <li class="page-item">
-                              <a href="#" class="page-link" aria-label="Previous">
-                                  <span aria-hidden="true">
-                                      <i class="ti-angle-left"></i>
-                                  </span>
-                              </a>
-                          </li>
-                          <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                          <li class="page-item"><a href="#" class="page-link">2</a></li>
-                          <li class="page-item">
-                              <a href="#" class="page-link" aria-label="Next">
-                                  <span aria-hidden="true">
-                                      <i class="ti-angle-right"></i>
-                                  </span>
-                              </a>
-                          </li>
-                      </ul>
-                  </nav>
+                <nav class="blog-pagination justify-content-center d-flex">
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a href="#" class="page-link" aria-label="Previous">
+                        <span aria-hidden="true">
+                          <i class="ti-angle-left"></i>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item">
+                      <a href="#" class="page-link" aria-label="Next">
+                        <span aria-hidden="true">
+                          <i class="ti-angle-right"></i>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
               </div>
             </div>
           </div>
@@ -116,7 +113,6 @@ Sensive Blog - Home
                 </div>
                 <button class="bbtns d-block mt-20 w-100">Subcribe</button>
               </div>
-
 
               <div class="single-sidebar-widget post-category-widget">
                 <h4 class="single-sidebar-widget" style="height:200px;">Здесь будет реклама</h4>
